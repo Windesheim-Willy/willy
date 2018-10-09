@@ -1,0 +1,29 @@
+version: '2.1'
+
+services:
+  ros-master:
+    extends:
+      file: ros_master/docker-compose.yml
+      service: ros-master
+
+  brain:
+    extends:
+      file: brain/docker-compose.yml
+      service: brain
+    environment:
+      - "ROS_MASTER_URI=http://ros-master:11311"
+      - "ROS_HOSTNAME=brain"
+    depends_on:
+      ros-master:
+        condition: service_healthy
+
+  portainer:
+    image: portainer/portainer
+    command: --no-auth -H unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "9000:9000"
+
+networks:
+  ros:

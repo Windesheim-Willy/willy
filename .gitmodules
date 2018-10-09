@@ -7,3 +7,15 @@
 [submodule "lidar"]
 	path = lidar
 	url = https://github.com/Windesheim-Willy/lidar.git
+[submodule "components/sonar"]
+	path = components/sonar
+	url = https://github.com/Windesheim-Willy/sonar.git
+[submodule "components/kinect"]
+	path = components/kinect
+	url = https://github.com/Windesheim-Willy/kinect.git
+[submodule "components/social_interaction"]
+	path = components/social_interaction
+	url = https://github.com/Windesheim-Willy/social_interaction.git
+[submodule "components/motor_controller"]
+	path = components/motor_controller
+	url = https://github.com/Windesheim-Willy/motor_controller.git

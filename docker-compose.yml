@@ -3,17 +3,60 @@ version: '2.1'
 services:
   ros-master:
     extends:
-      file: ros_master/docker-compose.yml
+      file: components/ros_master/docker-compose.yml
       service: ros-master
+
+  keyboard:
+    extends:
+      file: components/keyboard/docker-compose.yml
+      service: keyboard
+    depends_on:
+      ros-master:
+        condition: service_healthy
 
   lidar:
     extends:
-      file: lidar/docker-compose.yml
+      file: components/lidar/docker-compose.yml
       service: lidar
+    depends_on:
+      ros-master:
+        condition: service_healthy
+
+  sonar:
+    extends:
+      file: components/sonar/docker-compose.yml
+      service: sonar
+    depends_on:
+      ros-master:
+        condition: service_healthy
+
+  kinect:
+    extends:
+      file: components/kinect/docker-compose.yml
+      service: kinect
+    depends_on:
+      ros-master:
+        condition: service_healthy
+
+  motor_controller:
+    extends:
+      file: components/motor_controller/docker-compose.yml
+      service: motor_controller
+    depends_on:
+      ros-master:
+        condition: service_healthy
+
+  social_interaction:
+    extends:
+      file: components/social_interaction/docker-compose.yml
+      service: social_interaction
+    depends_on:
+      ros-master:
+        condition: service_healthy
 
   brain:
     extends:
-      file: brain/docker-compose.yml
+      file: components/brain/docker-compose.yml
       service: brain
     environment:
       - "ROS_MASTER_URI=http://ros-master:11311"

@@ -1,9 +1,24 @@
 [submodule "brain"]
-	path = brain
+	path = components/brain
 	url = https://github.com/Windesheim-Willy/brain.git
 [submodule "ros_master"]
-	path = ros_master
+	path = components/ros_master
 	url = https://github.com/Windesheim-Willy/ros_master.git
 [submodule "lidar"]
-	path = lidar
+	path = components/lidar
 	url = https://github.com/Windesheim-Willy/lidar.git
+[submodule "components/sonar"]
+	path = components/sonar
+	url = https://github.com/Windesheim-Willy/sonar.git
+[submodule "components/kinect"]
+	path = components/kinect
+	url = https://github.com/Windesheim-Willy/kinect.git
+[submodule "components/social_interaction"]
+	path = components/social_interaction
+	url = https://github.com/Windesheim-Willy/social_interaction.git
+[submodule "components/motor_controller"]
+	path = components/motor_controller
+	url = https://github.com/Windesheim-Willy/motor_controller.git
+[submodule "components/keyboard"]
+	path = components/keyboard
+	url = https://github.com/Windesheim-Willy/keyboard.git

@@ -1,0 +1,6 @@
+[submodule "brain"]
+	path = brain
+	url = https://github.com/Windesheim-Willy/brain.git
+[submodule "ros_master"]
+	path = ros_master
+	url = https://github.com/Windesheim-Willy/ROS-master.git

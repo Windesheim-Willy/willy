@@ -6,6 +6,11 @@ services:
       file: ros_master/docker-compose.yml
       service: ros-master
 
+  lidar:
+    extends:
+      file: lidar/docker-compose.yml
+      service: lidar
+
   brain:
     extends:
       file: brain/docker-compose.yml

@@ -4,3 +4,6 @@
 [submodule "ros_master"]
 	path = ros_master
 	url = https://github.com/Windesheim-Willy/ros_master.git
+[submodule "lidar"]
+	path = lidar
+	url = https://github.com/Windesheim-Willy/lidar.git

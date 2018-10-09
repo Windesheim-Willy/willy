@@ -19,3 +19,6 @@
 [submodule "components/motor_controller"]
 	path = components/motor_controller
 	url = https://github.com/Windesheim-Willy/motor_controller.git
+[submodule "components/keyboard"]
+	path = components/keyboard
+	url = https://github.com/Windesheim-Willy/keyboard.git

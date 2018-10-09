@@ -1,11 +1,11 @@
 [submodule "brain"]
-	path = brain
+	path = components/brain
 	url = https://github.com/Windesheim-Willy/brain.git
 [submodule "ros_master"]
-	path = ros_master
+	path = components/ros_master
 	url = https://github.com/Windesheim-Willy/ros_master.git
 [submodule "lidar"]
-	path = lidar
+	path = components/lidar
 	url = https://github.com/Windesheim-Willy/lidar.git
 [submodule "components/sonar"]
 	path = components/sonar

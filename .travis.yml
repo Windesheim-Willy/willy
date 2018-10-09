@@ -4,3 +4,6 @@ language: ruby
 
 services:
   - docker
+
+script:
+  - docker-compose -f docker-compose.yml pull

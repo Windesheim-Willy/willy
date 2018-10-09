@@ -17,6 +17,14 @@ services:
       ros-master:
         condition: service_healthy
 
+  portainer:
+    image: portainer/portainer
+    command: --no-auth -H unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "9000:9000"
+
 networks:
   ros:
     driver: bridge

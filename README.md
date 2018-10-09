@@ -14,3 +14,18 @@ For more information, check out the ROS master wiki [Wiki](https://windesheim-wi
 ```
 git submodule add <GIT URL> <FOLDER NAME>
 ```
+
+### Keep submodules up-to-date
+
+When updating submodules for the first time, use:
+
+	git submodule update --init --recursive
+
+When updating the current submodule branches, use:
+
+	git submodule update --recursive
+
+When updating all submodules with the latest commits on the supermodule, use:
+
+	git submodule update --recursive --remote
+

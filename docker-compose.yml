@@ -34,6 +34,9 @@ services:
     extends:
       file: components/kinect/docker-compose.yml
       service: kinect
+    environment:
+      - "ROS_MASTER_URI=http://ros-master:11311"
+      - "ROS_HOSTNAME=kinect"
     depends_on:
       ros-master:
         condition: service_healthy

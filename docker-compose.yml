@@ -18,6 +18,9 @@ services:
     extends:
       file: components/lidar/docker-compose.yml
       service: lidar
+    environment:
+      - "ROS_MASTER_URI=http://ros-master:11311"
+      - "ROS_HOSTNAME=lidar"
     depends_on:
       ros-master:
         condition: service_healthy

@@ -44,6 +44,17 @@ services:
       ros-master:
         condition: service_healthy
 
+  microphone:
+    extends:
+      file: components/microphone/docker-compose.yml
+      service: microphone
+    environment:
+      - "ROS_MASTER_URI=http://ros-master:11311"
+      - "ROS_HOSTNAME=microphone"
+    depends_on:
+      ros-master:
+        condition: service_healthy
+
   # motor_controller:
   #   extends:
   #     file: components/motor_controller/docker-compose.yml

@@ -78,6 +78,14 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
       - "9000:9000"
+      
+   openmv_apriltag:
+    extends:
+      file: components/openmv_apriltag/docker-compose.yml
+      service: openmv_apriltag
+    depends_on:
+      ros-master:
+        condition: service_healthy
 
 networks:
   ros:

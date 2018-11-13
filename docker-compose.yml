@@ -6,33 +6,33 @@ services:
       file: components/ros_master/docker-compose.yml
       service: ros-master
 
-  keyboard:
-    extends:
-      file: components/keyboard/docker-compose.yml
-      service: keyboard
-    depends_on:
-      ros-master:
-        condition: service_healthy
-
-  lidar:
-    extends:
-      file: components/lidar/docker-compose.yml
-      service: lidar
-    environment:
-      - "ROS_MASTER_URI=http://ros-master:11311"
-      - "ROS_HOSTNAME=lidar"
-    depends_on:
-      ros-master:
-        condition: service_healthy
-
-  sonar:
-    extends:
-      file: components/sonar/docker-compose.yml
-      service: sonar
-    depends_on:
-      ros-master:
-        condition: service_healthy
-
+  # keyboard:
+  #   extends:
+  #     file: components/keyboard/docker-compose.yml
+  #     service: keyboard
+  #   depends_on:
+  #     ros-master:
+  #       condition: service_healthy
+  #
+  # lidar:
+  #   extends:
+  #     file: components/lidar/docker-compose.yml
+  #     service: lidar
+  #   environment:
+  #     - "ROS_MASTER_URI=http://ros-master:11311"
+  #     - "ROS_HOSTNAME=lidar"
+  #   depends_on:
+  #     ros-master:
+  #       condition: service_healthy
+  #
+  # sonar:
+  #   extends:
+  #     file: components/sonar/docker-compose.yml
+  #     service: sonar
+  #   depends_on:
+  #     ros-master:
+  #       condition: service_healthy
+  #
   kinect:
     extends:
       file: components/kinect/docker-compose.yml
@@ -43,30 +43,41 @@ services:
     depends_on:
       ros-master:
         condition: service_healthy
+  #
+  # motor_controller:
+  #   extends:
+  #     file: components/motor_controller/docker-compose.yml
+  #     service: motor_controller
+  #   depends_on:
+  #     ros-master:
+  #       condition: service_healthy
+  #
+  # social_interaction:
+  #   extends:
+  #     file: components/social_interaction/docker-compose.yml
+  #     service: social_interaction
+  #   depends_on:
+  #     ros-master:
+  #       condition: service_healthy
+  #
+  # brain:
+  #   extends:
+  #     file: components/brain/docker-compose.yml
+  #     service: brain
+  #   environment:
+  #     - "ROS_MASTER_URI=http://ros-master:11311"
+  #     - "ROS_HOSTNAME=brain"
+  #   depends_on:
+  #     ros-master:
+  #       condition: service_healthy
 
-  motor_controller:
+  human_detection:
     extends:
-      file: components/motor_controller/docker-compose.yml
-      service: motor_controller
-    depends_on:
-      ros-master:
-        condition: service_healthy
-
-  social_interaction:
-    extends:
-      file: components/social_interaction/docker-compose.yml
-      service: social_interaction
-    depends_on:
-      ros-master:
-        condition: service_healthy
-
-  brain:
-    extends:
-      file: components/brain/docker-compose.yml
-      service: brain
+      file: components/human_detection/docker-compose.yml
+      service: human_detection
     environment:
       - "ROS_MASTER_URI=http://ros-master:11311"
-      - "ROS_HOSTNAME=brain"
+      - "ROS_HOSTNAME=human_detection"
     depends_on:
       ros-master:
         condition: service_healthy

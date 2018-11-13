@@ -79,7 +79,7 @@ services:
     ports:
       - "9000:9000"
       
-   openmv_apriltag:
+  openmv_apriltag:
     extends:
       file: components/openmv_apriltag/docker-compose.yml
       service: openmv_apriltag

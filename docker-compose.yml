@@ -56,6 +56,9 @@ services:
     extends:
       file: components/social_interaction/docker-compose.yml
       service: social_interaction
+    environment:
+      - "ROS_MASTER_URI=http://ros-master:11311"
+      - "ROS_HOSTNAME=social_interaction"
     depends_on:
       ros-master:
         condition: service_healthy

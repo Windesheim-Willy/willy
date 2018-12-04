@@ -1,18 +1,12 @@
 [submodule "brain"]
 	path = components/brain
 	url = https://github.com/Windesheim-Willy/brain.git
-[submodule "ros_master"]
-	path = components/ros_master
-	url = https://github.com/Windesheim-Willy/ros_master.git
 [submodule "lidar"]
 	path = components/lidar
 	url = https://github.com/Windesheim-Willy/lidar.git
 [submodule "components/sonar"]
 	path = components/sonar
 	url = https://github.com/Windesheim-Willy/sonar.git
-[submodule "components/kinect"]
-	path = components/kinect
-	url = https://github.com/Windesheim-Willy/kinect.git
 [submodule "components/social_interaction"]
 	path = components/social_interaction
 	url = https://github.com/Windesheim-Willy/social_interaction.git
@@ -25,3 +19,6 @@
 [submodule "components/openmv_apriltag"]
 	path = components/openmv_apriltag
 	url = https://github.com/Windesheim-Willy/openmv_apriltag.git
+[submodule "components/navigation_stack"]
+	path = components/navigation_stack
+	url = git@github.com:Windesheim-Willy/navigation_stack.git

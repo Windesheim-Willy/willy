@@ -21,4 +21,4 @@
 	url = https://github.com/Windesheim-Willy/openmv_apriltag.git
 [submodule "components/navigation_stack"]
 	path = components/navigation_stack
-	url = git@github.com:Windesheim-Willy/navigation_stack.git
+	url = https://github.com/Windesheim-Willy/navigation_stack.git

@@ -25,3 +25,6 @@
 [submodule "components/openmv_apriltag"]
 	path = components/openmv_apriltag
 	url = https://github.com/Windesheim-Willy/openmv_apriltag.git
+[submodule "components/pose_tracking"]
+	path = components/pose_tracking
+	url = https://github.com/Windesheim-Willy/pose_tracking.git

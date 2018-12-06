@@ -22,6 +22,9 @@
 [submodule "components/keyboard"]
 	path = components/keyboard
 	url = https://github.com/Windesheim-Willy/keyboard.git
+[submodule "components/human_detection"]
+	path = components/human_detection
+	url = https://github.com/Windesheim-Willy/human_detection.git
 [submodule "components/openmv_apriltag"]
 	path = components/openmv_apriltag
 	url = https://github.com/Windesheim-Willy/openmv_apriltag.git

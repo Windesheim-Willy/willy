@@ -11,6 +11,7 @@ sleep 2 && start-stop-daemon --start --pidfile run/nav_stack.pid --make-pidfile 
 sleep 2 && start-stop-daemon --start --pidfile run/lidar.pid --make-pidfile --exec $(pwd)/components/lidar/run.sh &
 sleep 2 && start-stop-daemon --start --pidfile run/joystick.pid --make-pidfile --exec /opt/ros/kinetic/bin/roslaunch -- teleop_twist_joy teleop.launch &
 sleep 2 && start-stop-daemon --start --pidfile run/motor_driver.pid --make-pidfile --exec /opt/ros/kinetic/bin/rosrun -- rosserial_python serial_node.py _port:=/dev/willy_driver &
+sleep 2 && start-stop-daemon --start --pidfile run/sonar.pid --make-pidfile --exec /usr/bin/python2.7 -- $(pwd)/components/sonar/src/node/sonar-read.py > /dev/null &
 
 cat
 

@@ -10,9 +10,9 @@
 [submodule "components/sonar"]
 	path = components/sonar
 	url = https://github.com/Windesheim-Willy/sonar.git
-[submodule "components/kinect"]
-	path = components/kinect
-	url = https://github.com/Windesheim-Willy/kinect.git
+# [submodule "components/kinect"]
+# 	path = components/kinect
+# 	url = https://github.com/Windesheim-Willy/kinect.git
 [submodule "components/social_interaction"]
 	path = components/social_interaction
 	url = https://github.com/Windesheim-Willy/social_interaction.git

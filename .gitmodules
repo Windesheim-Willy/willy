@@ -4,21 +4,15 @@
 [submodule "lidar"]
 	path = components/lidar
 	url = https://github.com/Windesheim-Willy/lidar.git
-[submodule "components/sonar"]
-	path = components/sonar
-	url = https://github.com/Windesheim-Willy/sonar.git
-[submodule "components/social_interaction"]
-	path = components/social_interaction
-	url = https://github.com/Windesheim-Willy/social_interaction.git
 [submodule "components/motor_controller"]
 	path = components/motor_controller
 	url = https://github.com/Windesheim-Willy/motor_controller.git
-[submodule "components/keyboard"]
-	path = components/keyboard
-	url = https://github.com/Windesheim-Willy/keyboard.git
-[submodule "components/openmv_apriltag"]
-	path = components/openmv_apriltag
-	url = https://github.com/Windesheim-Willy/openmv_apriltag.git
 [submodule "components/navigation_stack"]
 	path = components/navigation_stack
 	url = https://github.com/Windesheim-Willy/navigation_stack.git
+[submodule "components/human_detection"]
+	path = components/human_detection
+	url = https://github.com/Windesheim-Willy/human_detection.git
+[submodule "components/keyboard"]
+	path = components/keyboard
+	url = https://github.com/Windesheim-Willy/keyboard.git

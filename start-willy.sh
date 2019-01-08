@@ -7,11 +7,11 @@ killall() {
 }
 
 start-stop-daemon --start --pidfile run/roscore.pid --make-pidfile --exec /opt/ros/kinetic/bin/roscore &
-sleep 2 && start-stop-daemon --start --pidfile run/nav_stack.pid --make-pidfile --exec /opt/ros/kinetic/bin/roslaunch -- $(pwd)/components/navigation_stack/navigation.launch path:=$(pwd)/components/navigation_stack &
 sleep 2 && start-stop-daemon --start --pidfile run/lidar.pid --make-pidfile --exec $(pwd)/components/lidar/run.sh &
-sleep 2 && start-stop-daemon --start --pidfile run/joystick.pid --make-pidfile --exec /opt/ros/kinetic/bin/roslaunch --$(pwd)/components/keyboard/launch/teleop.launch &
+sleep 2 && start-stop-daemon --start --pidfile run/lidar_filter.pid --make-pidfile --exec /opt/ros/kinetic/bin/roslaunch -- $(pwd)/components/navigation_stack/filter.launch path:=$(pwd)/components/navigation_stack &
+sleep 2 && start-stop-daemon --start --pidfile run/nav_stack.pid --make-pidfile --exec /opt/ros/kinetic/bin/roslaunch -- $(pwd)/components/navigation_stack/navigation.launch path:=$(pwd)/components/navigation_stack &
+sleep 2 && start-stop-daemon --start --pidfile run/joystick.pid --make-pidfile --exec /opt/ros/kinetic/bin/roslaunch -- $(pwd)/components/keyboard/launch/teleop.launch &
 sleep 2 && start-stop-daemon --start --pidfile run/motor_driver.pid --make-pidfile --exec /opt/ros/kinetic/bin/rosrun -- rosserial_python serial_node.py _port:=/dev/willy_driver &
-sleep 2 && start-stop-daemon --start --pidfile run/sonar.pid --make-pidfile --exec /usr/bin/python2.7 -- $(pwd)/components/sonar/src/node/sonar-read.py > /dev/null &
+sleep 2 && source $(pwd)/components/human_detection/devel/setup.bash && start-stop-daemon --start --pidfile run/huamn_detect.pid --make-pidfile --exec /opt/ros/kinetic/bin/roslaunch -- $(pwd)/components/human_detection/src/human_detection/src/launch/human_detection.launch > /dev/null &
 
 cat
-

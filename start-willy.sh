@@ -14,4 +14,5 @@ sleep 2 && start-stop-daemon --start --pidfile run/joystick.pid --make-pidfile -
 sleep 2 && start-stop-daemon --start --pidfile run/motor_driver.pid --make-pidfile --exec /opt/ros/kinetic/bin/rosrun -- rosserial_python serial_node.py _port:=/dev/willy_driver &
 sleep 2 && source $(pwd)/components/human_detection/devel/setup.bash && start-stop-daemon --start --pidfile run/huamn_detect.pid --make-pidfile --exec /opt/ros/kinetic/bin/roslaunch -- $(pwd)/components/human_detection/src/human_detection/src/launch/human_detection.launch > /dev/null &
 
+# this holds the console busy reading.. when pressing ctrl + c the killall method will be executed
 cat

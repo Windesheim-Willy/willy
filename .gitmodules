@@ -7,27 +7,27 @@
 [submodule "lidar"]
 	path = components/lidar
 	url = https://github.com/Windesheim-Willy/lidar.git
-[submodule "components/sonar"]
+[submodule "sonar"]
 	path = components/sonar
 	url = https://github.com/Windesheim-Willy/sonar.git
-[submodule "components/social_interaction"]
+[submodule "social_interaction"]
 	path = components/social_interaction
 	url = https://github.com/Windesheim-Willy/social_interaction.git
-[submodule "components/motor_controller"]
+[submodule "motor_controller"]
 	path = components/motor_controller
 	url = https://github.com/Windesheim-Willy/motor_controller.git
-[submodule "components/navigation_stack"]
+[submodule "navigation_stack"]
 	path = components/navigation_stack
 	url = https://github.com/Windesheim-Willy/navigation_stack.git
-[submodule "components/keyboard"]
+[submodule "keyboard"]
 	path = components/keyboard
 	url = https://github.com/Windesheim-Willy/keyboard.git
-[submodule "components/human_detection"]
+[submodule "human_detection"]
 	path = components/human_detection
 	url = https://github.com/Windesheim-Willy/human_detection.git
-[submodule "components/openmv_apriltag"]
+[submodule "openmv_apriltag"]
 	path = components/openmv_apriltag
 	url = https://github.com/Windesheim-Willy/openmv_apriltag.git
-[submodule "components/pose_tracking"]
+[submodule "pose_tracking"]
 	path = components/pose_tracking
 	url = https://github.com/Windesheim-Willy/pose_tracking.git
